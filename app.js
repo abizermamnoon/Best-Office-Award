@@ -1,6 +1,6 @@
 'use strict';
 const content = document.getElementById('content');
-const recipients = ['Uldana Abdikarim', 'Thomas Poitevin', 'Andrés Ramasco', 'Henrique Santos', 'Abraham Tamru Assefa'];
+const recipients = ['Uldana Abdikarim', 'Thomas Poitevin', 'Andrés Ramasco', 'Henrique Santos', 'Abraham Assefa'];
 const normalize = value => value.trim().replace(/\s+/g, ' ').toLowerCase();
 let timers = [];
 const skull = `<svg class="skull" viewBox="0 0 200 210" role="img" aria-label="Skull"><path fill="currentColor" d="M100 6C43 6 12 43 12 91c0 30 11 51 37 63v25h17v25h68v-25h17v-25c26-12 37-33 37-63C188 43 157 6 100 6Z"/><path fill="#000" d="M38 84c0-14 18-20 38-12l9 31c-25 17-47 5-47-19Zm124 0c0-14-18-20-38-12l-9 31c25 17 47 5 47-19Zm-62 26-16 27h32Zm-24 63h8v31h-8Zm20 0h8v31h-8Zm20 0h8v31h-8Z"/></svg>`;
