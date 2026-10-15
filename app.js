@@ -21,8 +21,8 @@ function render(){
  const route=location.hash;
  if(route==='#not-recognized'){
   content.innerHTML='<div class="cake" aria-hidden="true">✉️</div><div class="eyebrow">The best office award</div><h1>You are not a valid recipient of the best office award</h1>'+back();
- }else if(/^#recipient-[0-4]$/.test(route)){
-  const name=recipients[Number(route.slice(-1))];
+ }else if(/^#recipient-\d+$/.test(route) && Number(route.slice(11)) < recipients.length){
+  const name=recipients[Number(route.slice(11))];
   if(name==='Thomas Poitevin'){
    content.innerHTML='<h1 class="terminal">Malicious file is being downloaded into your phone ....</h1><div class="progress" aria-hidden="true"></div>';
    timers.push(setTimeout(()=>{content.innerHTML='<h1 class="terminal">file successfully downloaded</h1>';timers.push(setTimeout(()=>{document.body.classList.add('dark');content.innerHTML=skull+'<h1>French are down. Game on, Thomas 😈</h1>'+back();bindBack();},1000));},1000));
